@@ -95,7 +95,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <p>&copy; {currentYear} Your Name. All rights reserved.</p>
-            <p>Built with ❤️ and cutting-edge technology</p>
+            {/* <p>Built with ❤️ and cutting-edge technology</p> */}
           </motion.div>
 
           <motion.div
