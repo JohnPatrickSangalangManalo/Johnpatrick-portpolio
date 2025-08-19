@@ -44,7 +44,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="text-gradient">PORTFOLIO</span>
+          <span className="text-gradient">JOHN PATRICK MANALO</span>
         </motion.div>
 
         <div className="nav-menu">
