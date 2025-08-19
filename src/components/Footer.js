@@ -94,7 +94,7 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 1 }}
             viewport={{ once: true }}
           >
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 John Patrick. All rights reserved.</p>
             {/* <p>Built with ❤️ and cutting-edge technology</p> */}
           </motion.div>
 

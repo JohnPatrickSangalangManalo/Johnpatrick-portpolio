@@ -245,7 +245,7 @@ If you need help or have questions:
 
 ---
 
-**&copy; 2025 Your John Patrick. All rights reserved.**
+**&copy; 2025 John Patrick. All rights reserved.**
 **Built with ❤️ and cutting-edge technology**
 
 *Transform your digital presence with this futuristic portfolio template!*
