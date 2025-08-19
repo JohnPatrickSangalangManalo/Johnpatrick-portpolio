@@ -59,25 +59,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: "📧",
+      img: "/img/email_w.png",
       title: "Email",
       value: "manalojohnpatricksangalang@gmail.com",
       link: "mailto:manalojohnpatricksangalang@gmail.com"
     },
     {
-      icon: "📱",
-      title: "Phone",
-      value: "+63 931 793 4062",
-      link: "tel:+639317934062"
+      img: "/img/number_w.png",
+      title: "Phone No.",
+      value: "+62 931 793 4062",
+      link: "+62 931 793 4062"
     },
     {
-      icon: "🌐",
-      title: "Website",
-      value: "www.yourwebsite.com",
-      link: "https://www.yourwebsite.com"
+      img: "/img/facebook_w.png",
+      title: "Facebook",
+      value: "John Patrick Manalo",
+      link: "https://www.facebook.com/patsftjohn"
     },
     {
-      icon: "📍",
+      img: "/img/location_w.png",
       title: "Location",
       value: "Cavite, Philippines",
       link: "https://maps.app.goo.gl/P82nFKrSvmahL6i7A"
@@ -85,10 +85,10 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: "💼", label: "LinkedIn", url: "#" },
-    { icon: "🐙", label: "GitHub", url: "#" },
-    { icon: "🐦", label: "Twitter", url: "#" },
-    { icon: "📸", label: "Instagram", url: "#" }
+    { icon: "💼", img: "/img/linkedin.png", label: "LinkedIn", url: "https://www.linkedin.com/in/johnpatrick-manalo-a4903a314/" },
+    { icon: "🐙", img: "/img/github.png", label: "GitHub", url: "https://github.com/JohnPatrickSangalangManalo" },
+    { icon: "🐦", img: "/img/facebook.png", label: "Facebook", url: "https://www.facebook.com/patsftjohn" },
+    { icon: "🐦", img: "/img/instagram.png", label: "Instagram", url: "https://www.instagram.com/pats_ft.j/" },
   ];
 
   return (
@@ -130,7 +130,7 @@ const Contact = () => {
                   transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
                   whileHover={{ x: 10 }}
                 >
-                  <div className="contact-icon">{info.icon}</div>
+                  <div className="contact-icon">{info.img ? (<img src={info.img} alt={info.title} />) : info.icon}</div>
                   <div className="contact-text">
                     <h4>{info.title}</h4>
                     <span>{info.value}</span>
@@ -153,7 +153,7 @@ const Contact = () => {
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <span>{social.icon}</span>
+                    <span>{social.img ? (<img src={social.img} alt={social.label} />) : social.icon}</span>
                     <span className="social-label">{social.label}</span>
                   </motion.a>
                 ))}
