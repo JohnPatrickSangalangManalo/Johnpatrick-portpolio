@@ -67,7 +67,7 @@ const Contact = () => {
       img: "/img/number_w.png",
       title: "Phone No.",
       value: "+62 931 793 4062",
-      link: "+62 931 793 4062"
+      link: "tel:+629317934062"
     },
     {
       img: "/img/facebook_w.png",
