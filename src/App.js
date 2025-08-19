@@ -27,7 +27,7 @@ function App() {
         <div className="loading-content">
           <div className="loading-spinner"></div>
           <h2 className="text-gradient">INITIALIZING PORTFOLIO</h2>
-          <p>Loading systems...</p>
+          <p>Loading...</p>
         </div>
       </div>
     );
