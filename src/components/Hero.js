@@ -126,7 +126,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <span className="stat-number">50+</span>
+          <span className="stat-number">5+</span>
           <span className="stat-label">Projects Completed</span>
         </motion.div>
         
@@ -136,11 +136,11 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <span className="stat-number">3+</span>
+          <span className="stat-number">1+</span>
           <span className="stat-label">Years Experience</span>
         </motion.div>
         
-        <motion.div
+        {/* <motion.div
           className="stat-item"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -148,7 +148,7 @@ const Hero = () => {
         >
           <span className="stat-number">100%</span>
           <span className="stat-label">Client Satisfaction</span>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -105,17 +105,17 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             viewport={{ once: true }}
           >
-            <a href="#" className="social-link" aria-label="LinkedIn">
-              <span>💼</span>
+            <a href="https://www.linkedin.com/in/johnpatrick-manalo-a4903a314/" className="social-link" aria-label="LinkedIn">
+              <img src="/img/linkedin.png" alt="LinkedIn" width="24" height="24" />
             </a>
-            <a href="#" className="social-link" aria-label="GitHub">
-              <span>🐙</span>
+            <a href="https://github.com/JohnPatrickSangalangManalo" className="social-link" aria-label="GitHub">
+              <img src="/img/github.png" alt="GitHub" width="24" height="24" />
             </a>
-            <a href="#" className="social-link" aria-label="Twitter">
-              <span>🐦</span>
+            <a href="https://www.facebook.com/patsftjohn" className="social-link" aria-label="Facebook">
+              <img src="/img/facebook.png" alt="Facebook" width="24" height="24" />
             </a>
-            <a href="#" className="social-link" aria-label="Instagram">
-              <span>📸</span>
+            <a href="https://www.instagram.com/pats_ft.j/" className="social-link" aria-label="Instagram">
+              <img src="/img/instagram.png" alt="Instagram" width="24" height="24" />
             </a>
           </motion.div>
         </div>

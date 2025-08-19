@@ -35,12 +35,11 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Replace these with your actual EmailJS credentials
       const result = await emailjs.sendForm(
-        'service_r3te88b', // Replace with your EmailJS service ID
-        'template_ybbt1qt', // Replace with your EmailJS template ID
+        'service_r3te88b', 
+        'template_ybbt1qt',
         formRef.current,
-        'PwNFHBwPc5qYwwqXA' // Replace with your EmailJS user ID
+        'PwNFHBwPc5qYwwqXA' 
       );
 
       if (result.status === 200) {
@@ -85,10 +84,10 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: "💼", img: "/img/linkedin.png", label: "LinkedIn", url: "https://www.linkedin.com/in/johnpatrick-manalo-a4903a314/" },
-    { icon: "🐙", img: "/img/github.png", label: "GitHub", url: "https://github.com/JohnPatrickSangalangManalo" },
-    { icon: "🐦", img: "/img/facebook.png", label: "Facebook", url: "https://www.facebook.com/patsftjohn" },
-    { icon: "🐦", img: "/img/instagram.png", label: "Instagram", url: "https://www.instagram.com/pats_ft.j/" },
+    // { icon: "💼", img: "/img/linkedin.png", label: "LinkedIn", url: "https://www.linkedin.com/in/johnpatrick-manalo-a4903a314/" },
+    // { icon: "🐙", img: "/img/github.png", label: "GitHub", url: "https://github.com/JohnPatrickSangalangManalo" },
+    // { icon: "🐦", img: "/img/facebook.png", label: "Facebook", url: "https://www.facebook.com/patsftjohn" },
+    // { icon: "🐦", img: "/img/instagram.png", label: "Instagram", url: "https://www.instagram.com/pats_ft.j/" },
   ];
 
   return (
@@ -140,7 +139,7 @@ const Contact = () => {
             </div>
 
             <div className="social-links">
-              <h4>Follow Me</h4>
+              {/* <h4>Follow Me</h4> */}
               <div className="social-icons">
                 {socialLinks.map((social, index) => (
                   <motion.a
