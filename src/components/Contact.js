@@ -36,7 +36,7 @@ const Contact = () => {
 
     try {
       const result = await emailjs.sendForm(
-        'service_r3te88b', 
+        'service_1lc9klx', 
         'template_tvgfd5q',
         formRef.current,
         'PwNFHBwPc5qYwwqXA' 
