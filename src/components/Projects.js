@@ -12,81 +12,81 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
-    {
-      id: 1,
-      title: "AI-Powered E-Commerce Platform",
-      description: "A full-stack e-commerce solution with AI-powered product recommendations, real-time inventory management, and advanced analytics dashboard.",
-      image: "🛒",
-      category: "fullstack",
-      technologies: ["React", "Node.js", "MongoDB", "TensorFlow", "AWS"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Real-Time Chat Application",
-      description: "A modern chat application with real-time messaging, file sharing, video calls, and end-to-end encryption using WebRTC and Socket.io.",
-      image: "💬",
-      category: "fullstack",
-      technologies: ["React", "Socket.io", "Express.js", "WebRTC", "Redis"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Machine Learning Dashboard",
-      description: "Interactive dashboard for visualizing machine learning models, data analysis, and predictive analytics with real-time data streaming.",
-      image: "🤖",
-      category: "ai-ml",
-      technologies: ["Python", "TensorFlow", "React", "D3.js", "FastAPI"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Mobile Fitness Tracker",
-      description: "Cross-platform mobile app for tracking workouts, nutrition, and health metrics with personalized AI coaching and social features.",
-      image: "💪",
-      category: "mobile",
-      technologies: ["React Native", "Firebase", "TensorFlow Lite", "HealthKit", "Google Fit"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Blockchain Portfolio Tracker",
-      description: "Decentralized application for tracking cryptocurrency portfolios with real-time market data, DeFi integration, and portfolio analytics.",
-      image: "₿",
-      category: "blockchain",
-      technologies: ["Solidity", "React", "Web3.js", "Ethereum", "IPFS"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Smart Home Automation",
-      description: "IoT-based home automation system with voice control, sensor integration, and machine learning for predictive automation.",
-      image: "🏠",
-      category: "iot",
-      technologies: ["Python", "Arduino", "TensorFlow", "MQTT", "React"],
-      liveLink: "#",
-      githubLink: "#",
-      featured: false
-    }
+    // {
+    //   id: 1,
+    //   title: "AI-Powered E-Commerce Platform",
+    //   description: "A full-stack e-commerce solution with AI-powered product recommendations, real-time inventory management, and advanced analytics dashboard.",
+    //   image: "🛒",
+    //   category: "fullstack",
+    //   technologies: ["React", "Node.js", "MongoDB", "TensorFlow", "AWS"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   featured: true
+    // },
+    // {
+    //   id: 2,
+    //   title: "Real-Time Chat Application",
+    //   description: "A modern chat application with real-time messaging, file sharing, video calls, and end-to-end encryption using WebRTC and Socket.io.",
+    //   image: "💬",
+    //   category: "fullstack",
+    //   technologies: ["React", "Socket.io", "Express.js", "WebRTC", "Redis"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   featured: true
+    // },
+    // {
+    //   id: 3,
+    //   title: "Machine Learning Dashboard",
+    //   description: "Interactive dashboard for visualizing machine learning models, data analysis, and predictive analytics with real-time data streaming.",
+    //   image: "🤖",
+    //   category: "ai-ml",
+    //   technologies: ["Python", "TensorFlow", "React", "D3.js", "FastAPI"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   featured: false
+    // },
+    // {
+    //   id: 4,
+    //   title: "Mobile Fitness Tracker",
+    //   description: "Cross-platform mobile app for tracking workouts, nutrition, and health metrics with personalized AI coaching and social features.",
+    //   image: "💪",
+    //   category: "mobile",
+    //   technologies: ["React Native", "Firebase", "TensorFlow Lite", "HealthKit", "Google Fit"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   featured: false
+    // },
+    // {
+    //   id: 5,
+    //   title: "Blockchain Portfolio Tracker",
+    //   description: "Decentralized application for tracking cryptocurrency portfolios with real-time market data, DeFi integration, and portfolio analytics.",
+    //   image: "₿",
+    //   category: "blockchain",
+    //   technologies: ["Solidity", "React", "Web3.js", "Ethereum", "IPFS"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   featured: false
+    // },
+    // {
+    //   id: 6,
+    //   title: "Smart Home Automation",
+    //   description: "IoT-based home automation system with voice control, sensor integration, and machine learning for predictive automation.",
+    //   image: "🏠",
+    //   category: "iot",
+    //   technologies: ["Python", "Arduino", "TensorFlow", "MQTT", "React"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   featured: false
+    // }
   ];
 
   const filters = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'fullstack', label: 'Full-Stack' },
-    { id: 'ai-ml', label: 'AI/ML' },
-    { id: 'mobile', label: 'Mobile' },
-    { id: 'blockchain', label: 'Blockchain' },
-    { id: 'iot', label: 'IoT' }
+    // { id: 'all', label: 'All Projects' },
+    // { id: 'fullstack', label: 'Full-Stack' },
+    // { id: 'ai-ml', label: 'AI/ML' },
+    // { id: 'mobile', label: 'Mobile' },
+    // { id: 'blockchain', label: 'Blockchain' },
+    // { id: 'iot', label: 'IoT' }
   ];
 
   const filteredProjects = activeFilter === 'all' 
