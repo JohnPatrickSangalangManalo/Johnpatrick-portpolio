@@ -5,6 +5,8 @@ import './Navbar.css';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHomeVisible, setIsHomeVisible] = useState(true);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +33,27 @@ const Navbar = () => {
     { id: 'contact', label: 'CONTACT' }
   ];
 
+
+    useEffect(() => {
+      const homeSection = document.getElementById('home');
+      if (!homeSection) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsHomeVisible(entry.isIntersecting);
+        },
+        {
+          root: null,
+          threshold: 0.5,
+        }
+      );
+
+      observer.observe(homeSection);
+
+      return () => observer.disconnect();
+    }, []);
+
+
   return (
     <motion.nav 
       className={`navbar ${isScrolled ? 'scrolled' : ''}`}
@@ -44,7 +67,9 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="text-gradient">JOHN PATRICK MANALO</span>
+          <span className="text-gradient">
+            {isHomeVisible ? 'JINXdev' : 'JOHN PATRICK MANALO'}
+          </span>
         </motion.div>
 
         <div className="nav-menu">
