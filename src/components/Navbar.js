@@ -62,15 +62,17 @@ const Navbar = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="nav-container">
-        <motion.div 
-          className="nav-logo"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-gradient">
-            {isHomeVisible ? 'JINXdev' : 'JOHN PATRICK MANALO'}
-          </span>
-        </motion.div>
+      <motion.div 
+        className="nav-logo"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <img 
+          src="/img/logo.png" 
+          alt="Logo"
+          className="logo-img"
+        />
+      </motion.div>
 
         <div className="nav-menu">
           {navItems.map((item) => (
