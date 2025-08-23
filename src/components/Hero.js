@@ -136,7 +136,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <span className="stat-number">1+</span>
+          <span className="stat-number">2</span>
           <span className="stat-label">Years Experience</span>
         </motion.div>
         
