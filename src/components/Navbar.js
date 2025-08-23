@@ -68,7 +68,7 @@ const Navbar = () => {
         whileTap={{ scale: 0.95 }}
       >
         <img 
-          src="/img/logo.png" 
+          src={window.innerWidth <= 768 ? '/img/logo.png' : '/img/logo.png'}
           alt="Logo"
           className="logo-img"
         />

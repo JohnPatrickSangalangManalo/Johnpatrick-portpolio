@@ -49,24 +49,28 @@
   align-items: center;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+
 .logo-img {
-  height: 80px;
+  max-height: 100px;
   width: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
-
-  /* Neon glow */
-  filter: drop-shadow(0 0 6px #00d5ff4d)
-          drop-shadow(0 0 12px #00d5ff5b)
-          drop-shadow(0 0 20px #ff00ff3d);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 0 8px var(--neon))
+          drop-shadow(0 0 20px var(--neon));
 }
 
 @media (max-width: 768px) {
   .logo-img {
-    height: 30px;
+    max-height: 38px;
+    filter: drop-shadow(0 0 4px var(--neon))
+            drop-shadow(0 0 10px var(--neon));
   }
 }
-
 
 /* Desktop Nav Menu */
 .nav-menu {
