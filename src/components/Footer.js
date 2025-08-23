@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Footer.css';
+import './css/Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

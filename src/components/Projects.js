@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import './Projects.css';
+import './css/Projects.css';
 
 const Projects = () => {
   const [ref, inView] = useInView({

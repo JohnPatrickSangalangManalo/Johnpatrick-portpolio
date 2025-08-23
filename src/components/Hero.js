@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import './Hero.css';
+import './css/Hero.css';
 
 const Hero = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);

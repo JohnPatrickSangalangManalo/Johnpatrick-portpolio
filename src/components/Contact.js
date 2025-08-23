@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import emailjs from 'emailjs-com';
-import './Contact.css';
+import './css/Contact.css';
 
 const Contact = () => {
   const [ref, inView] = useInView({
