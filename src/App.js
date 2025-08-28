@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     if (!audioRef.current) return;
-    audioRef.current.volume = 0.10; 
+    audioRef.current.volume = 0.07; 
     const playPromise = audioRef.current.play();
     if (playPromise && typeof playPromise.then === 'function') {
       playPromise.catch(() => {

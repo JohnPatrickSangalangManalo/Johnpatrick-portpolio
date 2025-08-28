@@ -12,28 +12,31 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
-    // {
-    //   id: 1,
-    //   title: "AI-Powered E-Commerce Platform",
-    //   description: "A full-stack e-commerce solution with AI-powered product recommendations, real-time inventory management, and advanced analytics dashboard.",
-    //   image: "🛒",
-    //   category: "fullstack",
-    //   technologies: ["React", "Node.js", "MongoDB", "TensorFlow", "AWS"],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    //   featured: true
-    // },
-    // {
-    //   id: 2,
-    //   title: "Real-Time Chat Application",
-    //   description: "A modern chat application with real-time messaging, file sharing, video calls, and end-to-end encryption using WebRTC and Socket.io.",
-    //   image: "💬",
-    //   category: "fullstack",
-    //   technologies: ["React", "Socket.io", "Express.js", "WebRTC", "Redis"],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    //   featured: true
-    // },
+    {
+      id: 1,
+      title: "MMNCRSystem",
+      description: "MMNCRSystem (Municipal Mendez-Nuñez Civil Registry System) is a web-based platform that digitizes civil registry records for Mendez-Nuñez, Cavite. It streamlines record retrieval, reduces paperwork, and improves public service efficiency through a user-friendly interface.",
+      image: "🏛️",
+      category: "Website",
+      technologies: ["PHP", "Javascript" ,"SCSS", "CSS", "HTML", "node.js"],
+      liveLink: "https://drive.google.com/file/d/1vvTk3xGZKZaNETxhcgNNUYjCNDqs2TLP/view?usp=sharing",
+      liveLabel: false,
+      // githubLink: "#",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "PERSONAL PORTFOLIO",
+      description: "A personal portfolio website designed to showcase projects, technical skills, and professional experience. Built using modern web technologies with a focus on performance, accessibility, and responsive design.",
+      image: "🌐",
+      category: "Website",
+      technologies: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
+      liveLabel: true,
+      liveLink: "https://johnpatrick-portpolio.vercel.app/",
+      githubLink: "https://github.com/JohnPatrickSangalangManalo/Johnpatrick-portpolio",
+      featured: true
+    }
+    
     // {
     //   id: 3,
     //   title: "Machine Learning Dashboard",
@@ -81,12 +84,12 @@ const Projects = () => {
   ];
 
   const filters = [
-    // { id: 'all', label: 'All Projects' },
-    // { id: 'fullstack', label: 'Full-Stack' },
+    { id: 'all', label: 'All Projects' },
+    { id: 'Website', label: 'Website' },
     // { id: 'ai-ml', label: 'AI/ML' },
-    // { id: 'mobile', label: 'Mobile' },
+    { id: 'mobile', label: 'Mobile' },
     // { id: 'blockchain', label: 'Blockchain' },
-    // { id: 'iot', label: 'IoT' }
+    { id: 'iot', label: 'IoT' }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -165,23 +168,39 @@ const Projects = () => {
                 </div>
                 
                 <div className="project-links">
-                  <motion.a
-                    href={project.liveLink}
-                    className="project-link live"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span>🌐 Live Demo</span>
-                  </motion.a>
-                  
-                  <motion.a
-                    href={project.githubLink}
-                    className="project-link github"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span>📁 Source Code</span>
-                  </motion.a>
+                  {project.liveLink ? (
+                    <motion.a
+                      href={project.liveLink}
+                      className="project-link live"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <span>🔗 {project.liveLabel === true ? 'Visit' : 'Live Demo'}</span>
+                    </motion.a>
+                  ) : (
+                    <span className="project-link live disabled" aria-disabled="true">
+                      🌐 No Demo
+                    </span>
+                  )}
+
+                  {project.githubLink ? (
+                    <motion.a
+                      href={project.githubLink}
+                      className="project-link github"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <span>📁 Source Code</span>
+                    </motion.a>
+                  ) : (
+                    <span className="project-link github disabled" aria-disabled="true">
+                      🔒 Private
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>
