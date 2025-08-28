@@ -286,4 +286,20 @@
     align-items: center;
   }
 }
+.navbar-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-link img {
+  transition: transform 0.3s ease;
+}
+
+.social-link img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
 

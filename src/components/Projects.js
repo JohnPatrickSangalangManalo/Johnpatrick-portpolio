@@ -92,7 +92,9 @@ const Projects = () => {
     // { id: 'ai-ml', label: 'AI/ML' },
     { id: 'mobile', label: 'Mobile' },
     // { id: 'blockchain', label: 'Blockchain' },
-    { id: 'iot', label: 'IoT' }
+    { id: 'iot', label: 'IoT' },
+    { id: 'multimedia', label: 'Photography/Videography' },
+    { id: 'grapics', label: 'Grapics Design' },
   ];
 
   const filteredProjects = activeFilter === 'all' 
