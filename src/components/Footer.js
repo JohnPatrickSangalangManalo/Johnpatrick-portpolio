@@ -63,8 +63,8 @@ const Footer = () => {
               <li>Web Development</li>
               <li>Mobile Apps</li>
               <li>UI/UX Design</li>
-              <li>AI/ML Solutions</li>
-              <li>Cloud Architecture</li>
+              {/* <li>AI/ML Solutions</li> */}
+              {/* <li>Cloud Architecture</li> */}np
             </ul>
           </motion.div>
 
