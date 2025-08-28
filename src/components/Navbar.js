@@ -5,7 +5,6 @@ import './css/Navbar.css';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isHomeVisible, setIsHomeVisible] = useState(true);
 
 
   useEffect(() => {
@@ -34,24 +33,24 @@ const Navbar = () => {
   ];
 
 
-    useEffect(() => {
-      const homeSection = document.getElementById('home');
-      if (!homeSection) return;
+    // useEffect(() => {
+    //   const homeSection = document.getElementById('home');
+    //   if (!homeSection) return;
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          setIsHomeVisible(entry.isIntersecting);
-        },
-        {
-          root: null,
-          threshold: 0.5,
-        }
-      );
+    //   const observer = new IntersectionObserver(
+    //     ([entry]) => {
+    //       setIsHomeVisible(entry.isIntersecting);
+    //     },
+    //     {
+    //       root: null,
+    //       threshold: 0.5,
+    //     }
+    //   );
 
-      observer.observe(homeSection);
+    //   observer.observe(homeSection);
 
-      return () => observer.disconnect();
-    }, []);
+    //   return () => observer.disconnect();
+    // }, []);
 
 
   return (
