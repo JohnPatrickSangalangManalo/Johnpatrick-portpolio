@@ -88,10 +88,10 @@ const About = () => {
                   <span>Python</span>
                 </div>
                 <div className="hexagon hexagon-4">
-                  <span>AI/ML</span>
+                  <span>PHP</span>
                 </div>
                 <div className="hexagon hexagon-5">
-                  <span>Cloud</span>
+                  <span>SQL</span>
                 </div>
                 <div className="hexagon hexagon-6">
                   <span>DevOps</span>
