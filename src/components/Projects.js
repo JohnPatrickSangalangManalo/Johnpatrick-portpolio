@@ -18,7 +18,7 @@ const Projects = () => {
       description: "Municipal Mendez-Nuñez Civil Registry System is a web-based platform that digitizes civil registry records for Mendez-Nuñez, Cavite. It streamlines record retrieval, reduces paperwork, and improves public service efficiency through a user-friendly interface.",
       image: "🏛️",
       imageSrc: "/img/mmncrsystem-cover.png",
-      category: "website",
+      category: "fullstack",
       technologies: ["PHP", "Javascript" ,"SCSS", "CSS", "HTML", "node.js"],
       liveLink: "https://drive.google.com/file/d/1vvTk3xGZKZaNETxhcgNNUYjCNDqs2TLP/view?usp=sharing",
       liveLabel: false,
@@ -30,7 +30,7 @@ const Projects = () => {
       title: "PERSONAL PORTFOLIO",
       description: "A personal portfolio website designed to showcase projects, technical skills, and professional experience. Built using modern web technologies with a focus on performance, accessibility, and responsive design.",
       image: "🌐",
-      category: "website",
+      category: "fullstack",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
       liveLabel: true,
       liveLink: "https://johnpatrick-portpolio.vercel.app/",
@@ -88,7 +88,7 @@ const Projects = () => {
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'website', label: 'Website' },
+    { id: 'fullstack', label: 'Fullstack' },
     // { id: 'ai-ml', label: 'AI/ML' },
     { id: 'mobile', label: 'Mobile' },
     // { id: 'blockchain', label: 'Blockchain' },
