@@ -171,6 +171,12 @@
   color: #888;
 }
 
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
 .scroll-arrow {
   width: 20px;
   height: 20px;

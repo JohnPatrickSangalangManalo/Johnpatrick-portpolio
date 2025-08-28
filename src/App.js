@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,6 +11,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     // Simulate loading time
@@ -19,6 +20,16 @@ function App() {
     }, 2000);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!audioRef.current) return;
+    audioRef.current.volume = 0.10; 
+    const playPromise = audioRef.current.play();
+    if (playPromise && typeof playPromise.then === 'function') {
+      playPromise.catch(() => {
+      });
+    }
   }, []);
 
   if (loading) {
@@ -44,6 +55,15 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      {/* Background audio at fixed 10% volume */}
+      <audio
+        ref={audioRef}
+        src="/audio/ILLIT - Magnetic.mp3"
+        autoPlay
+        loop
+        playsInline
+        style={{ display: 'none' }}
+      />
       <Analytics />
     </div>
   );

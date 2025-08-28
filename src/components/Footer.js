@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './css/Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,7 +30,7 @@ const Footer = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-gradient">PORTFOLIO</h3>
+            <img src="/img/logo.png" alt="Portfolio Logo" style={{ maxHeight: '60px', width: 'auto' }} />
             <p>Innovation • Creativity • Excellence</p>
           </motion.div>
 
@@ -94,7 +104,7 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 1 }}
             viewport={{ once: true }}
           >
-            <p>&copy; 2025 John Patrick. All rights reserved.</p>
+            <p>&copy; {currentYear} John Patrick. All rights reserved.</p>
             {/* <p>Built with ❤️ and cutting-edge technology</p> */}
           </motion.div>
 
@@ -121,18 +131,20 @@ const Footer = () => {
         </div>
       </div>
 
-      <motion.button
-        className="scroll-to-top"
-        onClick={scrollToTop}
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 1.5 }}
-        viewport={{ once: true }}
-        whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(0, 212, 255, 0.6)" }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <span className="arrow-up">↑</span>
-      </motion.button>
+      {showScrollTop && (
+        <motion.button
+          className="scroll-to-top"
+          onClick={scrollToTop}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(0, 212, 255, 0.6)" }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <span className="arrow-up">↑</span>
+        </motion.button>
+      )}
     </footer>
   );
 };

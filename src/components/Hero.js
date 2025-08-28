@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import './css/Hero.css';
 
@@ -7,12 +7,12 @@ const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const texts = [
+  const texts = useMemo(() => ([
     'FULL-STACK DEVELOPER',
     'UI/UX DESIGNER',
     'CREATIVE THINKER',
     'PROBLEM SOLVER'
-  ];
+  ]), []);
 
   useEffect(() => {
     let timeout;
@@ -113,6 +113,15 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
+          onClick={() => scrollToSection('about')}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              scrollToSection('about');
+            }
+          }}
         >
           <div className="scroll-arrow"></div>
           <p>Scroll to explore</p>
