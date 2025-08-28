@@ -58,7 +58,7 @@ function App() {
       {/* Background audio at fixed 10% volume */}
       <audio
         ref={audioRef}
-        src="/audio/ILLIT - Magnetic.mp3"
+        src=""
         autoPlay
         loop
         playsInline
