@@ -14,10 +14,11 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "MMNCRSystem",
-      description: "MMNCRSystem (Municipal Mendez-Nuñez Civil Registry System) is a web-based platform that digitizes civil registry records for Mendez-Nuñez, Cavite. It streamlines record retrieval, reduces paperwork, and improves public service efficiency through a user-friendly interface.",
+      title: "MMNCRSYSTEM",
+      description: "Municipal Mendez-Nuñez Civil Registry System is a web-based platform that digitizes civil registry records for Mendez-Nuñez, Cavite. It streamlines record retrieval, reduces paperwork, and improves public service efficiency through a user-friendly interface.",
       image: "🏛️",
-      category: "Website",
+      imageSrc: "/img/mmncrsystem-cover.png",
+      category: "website",
       technologies: ["PHP", "Javascript" ,"SCSS", "CSS", "HTML", "node.js"],
       liveLink: "https://drive.google.com/file/d/1vvTk3xGZKZaNETxhcgNNUYjCNDqs2TLP/view?usp=sharing",
       liveLabel: false,
@@ -29,25 +30,27 @@ const Projects = () => {
       title: "PERSONAL PORTFOLIO",
       description: "A personal portfolio website designed to showcase projects, technical skills, and professional experience. Built using modern web technologies with a focus on performance, accessibility, and responsive design.",
       image: "🌐",
-      category: "Website",
+      category: "website",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
       liveLabel: true,
       liveLink: "https://johnpatrick-portpolio.vercel.app/",
       githubLink: "https://github.com/JohnPatrickSangalangManalo/Johnpatrick-portpolio",
       featured: true
-    }
+    },
     
-    // {
-    //   id: 3,
-    //   title: "Machine Learning Dashboard",
-    //   description: "Interactive dashboard for visualizing machine learning models, data analysis, and predictive analytics with real-time data streaming.",
-    //   image: "🤖",
-    //   category: "ai-ml",
-    //   technologies: ["Python", "TensorFlow", "React", "D3.js", "FastAPI"],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    //   featured: false
-    // },
+    {
+      id: 3,
+      title: "GAMEDEX (ACADEMIC PROJECT)",
+      description: "A Flutter-based academic mobile app featuring arcade and retro-style games, organized into Main and Mini categories. It showcases skills in mobile development, game logic, UI/UX design, and teamwork.",
+      image: "🤖",
+      imageSrc: "/img/gamedex-cover.png",
+      category: "mobile",
+      technologies: ["Flutter", "Dart"],
+      liveLabel: false,
+      liveLink: "3",
+      // githubLink: "#",
+      featured: false
+    },
     // {
     //   id: 4,
     //   title: "Mobile Fitness Tracker",
@@ -85,7 +88,7 @@ const Projects = () => {
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'Website', label: 'Website' },
+    { id: 'website', label: 'Website' },
     // { id: 'ai-ml', label: 'AI/ML' },
     { id: 'mobile', label: 'Mobile' },
     // { id: 'blockchain', label: 'Blockchain' },
@@ -131,7 +134,7 @@ const Projects = () => {
         </motion.div>
 
         <motion.div
-          className="projects-grid"
+          className={`projects-grid ${filteredProjects.length === 1 ? 'single' : ''}`}
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -152,7 +155,16 @@ const Projects = () => {
               )}
               
               <div className="project-image">
-                <div className="project-icon">{project.image}</div>
+                <img
+                  src={project.imageSrc || '/img/default-cover.png'}
+                  alt={`${project.title} cover`}
+                  className="project-cover"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/img/default-cover.png';
+                  }}
+                />
               </div>
               
               <div className="project-content">
@@ -169,16 +181,24 @@ const Projects = () => {
                 
                 <div className="project-links">
                   {project.liveLink ? (
-                    <motion.a
-                      href={project.liveLink}
-                      className="project-link live"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      <span>🔗 {project.liveLabel === true ? 'Visit' : 'Live Demo'}</span>
-                    </motion.a>
+                    (() => {
+                      const isValidLive = /^https?:\/\//i.test(project.liveLink);
+                      const liveHref = isValidLive ? project.liveLink : '/404.html';
+                      const liveTarget = isValidLive ? '_blank' : undefined;
+                      const liveRel = isValidLive ? 'noreferrer noopener' : undefined;
+                      return (
+                        <motion.a
+                          href={liveHref}
+                          className="project-link live"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          target={liveTarget}
+                          rel={liveRel}
+                        >
+                          <span>🔗 {project.liveLabel === true ? 'Visit' : 'Demo'}</span>
+                        </motion.a>
+                      );
+                    })()
                   ) : (
                     <span className="project-link live disabled" aria-disabled="true">
                       🌐 No Demo

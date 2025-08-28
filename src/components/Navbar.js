@@ -74,17 +74,19 @@ const Navbar = () => {
       </motion.div>
 
         <div className="nav-menu">
-          {navItems.map((item) => (
-            <motion.button
-              key={item.id}
-              className="nav-item"
-              onClick={() => scrollToSection(item.id)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {item.label}
-            </motion.button>
-          ))}
+          <div className="nav-items-container">
+            {navItems.map((item) => (
+              <motion.button
+                key={item.id}
+                className="nav-item"
+                onClick={() => scrollToSection(item.id)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item.label}
+              </motion.button>
+            ))}
+          </div>
         </div>
 
         <div 

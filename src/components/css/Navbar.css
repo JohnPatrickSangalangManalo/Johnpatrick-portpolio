@@ -78,8 +78,18 @@
   gap: 30px;
 }
 
+.nav-items-container {
+  display: flex;
+  gap: 16px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  padding: 8px 12px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 212, 255, 0.08);
+}
+
 .nav-item {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(0, 213, 255, 0.308);
   border-radius: 25px;
   padding: 10px 20px;
   color: #00d4ff;
