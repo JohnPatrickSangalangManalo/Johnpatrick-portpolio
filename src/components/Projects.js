@@ -59,8 +59,8 @@ const Projects = () => {
       imageSrc: "",
       category: "fullstack",
       technologies: ["HTML", "CSS", "Javascript"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://baybayin-clock.vercel.app/",
+      githubLink: "https://github.com/JohnPatrickSangalangManalo/Baybayin-clock",
       featured: false
     },
     // {
