@@ -51,17 +51,18 @@ const Projects = () => {
       // githubLink: "#",
       featured: false
     },
-    // {
-    //   id: 4,
-    //   title: "Mobile Fitness Tracker",
-    //   description: "Cross-platform mobile app for tracking workouts, nutrition, and health metrics with personalized AI coaching and social features.",
-    //   image: "💪",
-    //   category: "mobile",
-    //   technologies: ["React Native", "Firebase", "TensorFlow Lite", "HealthKit", "Google Fit"],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    //   featured: false
-    // },
+    {
+      id: 4,
+      title: "BAYBAYIN CLOCK inspired in kdrama ",
+      description: "Analog clock inspired by the K-Drama Love Next Door, with numbers written in Baybayin—a blend of Korean drama charm and Filipino heritage.",
+      image: "🕜",
+      imageSrc: "",
+      category: "fullstack",
+      technologies: ["HTML", "CSS", "Javascript"],
+      liveLink: "#",
+      githubLink: "#",
+      featured: false
+    },
     // {
     //   id: 5,
     //   title: "Blockchain Portfolio Tracker",
