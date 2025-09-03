@@ -64,7 +64,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: %,
+      id: 5,
       title: "IPTV ",
       description: "An IpTV Using MPD ",
       image: "📺",
