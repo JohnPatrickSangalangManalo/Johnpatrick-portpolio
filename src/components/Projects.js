@@ -63,17 +63,18 @@ const Projects = () => {
       githubLink: "https://github.com/JohnPatrickSangalangManalo/Baybayin-clock",
       featured: false
     },
-    // {
-    //   id: 5,
-    //   title: "Blockchain Portfolio Tracker",
-    //   description: "Decentralized application for tracking cryptocurrency portfolios with real-time market data, DeFi integration, and portfolio analytics.",
-    //   image: "₿",
-    //   category: "blockchain",
-    //   technologies: ["Solidity", "React", "Web3.js", "Ethereum", "IPFS"],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    //   featured: false
-    // },
+    {
+      id: %,
+      title: "IPTV ",
+      description: "An IpTV Using MPD ",
+      image: "📺",
+      imageSrc: "",
+      category: "fullstack",
+      technologies: ["Typescript", "React", "Javascript", "Shaka Player", "Dash.Js", "Framer Motion"],
+      liveLink: "https://cookiestv.vercel.app/",
+      githubLink: "",
+      featured: false
+    },
     // {
     //   id: 6,
     //   title: "Smart Home Automation",
