@@ -65,7 +65,7 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "IPTV ",
+      title: "COOKIES IPTV",
       description: "An IpTV Using MPD ",
       image: "📺",
       imageSrc: "",
