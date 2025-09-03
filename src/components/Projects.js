@@ -51,28 +51,30 @@ const Projects = () => {
       // githubLink: "#",
       featured: false
     },
-    // {
-    //   id: 4,
-    //   title: "Mobile Fitness Tracker",
-    //   description: "Cross-platform mobile app for tracking workouts, nutrition, and health metrics with personalized AI coaching and social features.",
-    //   image: "💪",
-    //   category: "mobile",
-    //   technologies: ["React Native", "Firebase", "TensorFlow Lite", "HealthKit", "Google Fit"],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    //   featured: false
-    // },
-    // {
-    //   id: 5,
-    //   title: "Blockchain Portfolio Tracker",
-    //   description: "Decentralized application for tracking cryptocurrency portfolios with real-time market data, DeFi integration, and portfolio analytics.",
-    //   image: "₿",
-    //   category: "blockchain",
-    //   technologies: ["Solidity", "React", "Web3.js", "Ethereum", "IPFS"],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    //   featured: false
-    // },
+    {
+      id: 4,
+      title: "BAYBAYIN CLOCK inspired in kdrama ",
+      description: "Analog clock inspired by the K-Drama Love Next Door, with numbers written in Baybayin—a blend of Korean drama charm and Filipino heritage.",
+      image: "🕜",
+      imageSrc: "",
+      category: "fullstack",
+      technologies: ["HTML", "CSS", "Javascript"],
+      liveLink: "https://baybayin-clock.vercel.app/",
+      githubLink: "https://github.com/JohnPatrickSangalangManalo/Baybayin-clock",
+      featured: false
+    },
+    {
+      id: %,
+      title: "IPTV ",
+      description: "An IpTV Using MPD ",
+      image: "📺",
+      imageSrc: "",
+      category: "fullstack",
+      technologies: ["Typescript", "React", "Javascript", "Shaka Player", "Dash.Js", "Framer Motion"],
+      liveLink: "https://cookiestv.vercel.app/",
+      githubLink: "",
+      featured: false
+    },
     // {
     //   id: 6,
     //   title: "Smart Home Automation",
