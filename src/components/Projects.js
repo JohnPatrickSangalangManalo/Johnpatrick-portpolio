@@ -66,12 +66,12 @@ const Projects = () => {
     {
       id: 5,
       title: "COOKIES IPTV",
-      description: "An IpTV Using MPD ",
+      description: "An IPTV application using MPD streaming technology. Provides live TV channels with a clean, modern UI and smooth playback.",
       image: "📺",
       imageSrc: "",
       category: "fullstack",
       technologies: ["Typescript", "React", "Javascript", "Shaka Player", "Dash.Js", "Framer Motion"],
-      liveLink: "https://cookiestv.vercel.app/",
+      liveLink: "https://cookiesiptv.vercel.app/",
       githubLink: "",
       featured: false
     },
