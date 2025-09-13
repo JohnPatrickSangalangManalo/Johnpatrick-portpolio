@@ -71,7 +71,7 @@ const Projects = () => {
       imageSrc: "",
       category: "fullstack",
       technologies: ["Typescript", "React", "Javascript", "Shaka Player", "Dash.Js", "Framer Motion"],
-      liveLink: "https://cookiestv.vercel.app/",
+      liveLink: "https://cookiesiptv.vercel.app/",
       githubLink: "",
       featured: false
     },
