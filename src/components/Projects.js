@@ -75,6 +75,18 @@ const Projects = () => {
       githubLink: "",
       featured: false
     },
+    {
+      id: 6,
+      title: "CS TROWBACK GAME",
+      description: "A School Project",
+      image: "🎒",
+      imageSrc: "/img/csthrowbackgame.png",
+      category: "fullstack",
+      technologies: ["C#", "NET"],
+      liveLink: "https://cookies-iptv.vercel.app/",
+      githubLink: "",
+      featured: false
+    },
     // {
     //   id: 6,
     //   title: "Smart Home Automation",
